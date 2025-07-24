@@ -3,89 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Repositorio de Economía</title>
-  <link rel="stylesheet" href="CSS/styles.css" />
-  <style>
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    overflow-x: hidden;
-    position: relative;
-  }
-
-  .fondo-animado {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    z-index: -1;
-  }
-
-  .blob {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, #9b5de5, #f15bb5);
-    opacity: 0.6;
-    filter: blur(100px);
-    animation: mover 30s ease-in-out infinite;
-    border-radius: 50%;
-  }
-
-  .blob:nth-child(2) {
-    left: 60%;
-    top: 30%;
-    background: radial-gradient(circle, #00bbf9, #00f5d4);
-    animation-delay: 5s;
-  }
-
-  .blob:nth-child(3) {
-    left: 30%;
-    top: 60%;
-    background: radial-gradient(circle, #fee440, #f15bb5);
-    animation-delay: 10s;
-  }
-
-  @keyframes mover {
-    0%, 100% { transform: translateY(0) translateX(0); }
-    50% { transform: translateY(-100px) translateX(100px); }
-  }
-</style>
-
+  <title>Repositorio de Apuntes</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<!-- FONDO ANIMADO -->
-<div class="fondo-animado">
-  <div class="blob"></div>
-  <div class="blob"></div>
-  <div class="blob"></div>
-</div>
-
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Repositorio con apuntes de la carrera de Economía UCR</h1>
-      <div class="logo-nombre">
-        <img src="logo.jpg" alt="Logo ADECO" class="logo">
-        <span class="nombre">ADECO</span>
-      </div>
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo ADECO" class="logo" />
     </div>
+    <hr class="linea-horizontal-top">
+    <h1 class="titulo">Repositorio de Apuntes</h1>
+    <span class="autor">ADECO</span>
+    <hr class="linea-horizontal-bottom">
   </header>
 
-  <main class="semestres">
-    <section class="grid-semestres">
-      <a href="semestres/semestre1/index.html" class="cuadro">Semestre 1</a>
-      <a href="semestres/semestre2/index.html" class="cuadro">Semestre 2</a>
-      <a href="semestres/semestre3/index.html" class="cuadro">Semestre 3</a>
-      <a href="semestres/semestre4/index.html" class="cuadro">Semestre 4</a>
-      <a href="semestres/semestre5/index.html" class="cuadro">Semestre 5</a>
-      <a href="semestres/semestre6/index.html" class="cuadro">Semestre 6</a>
-      <a href="semestres/semestre7/index.html" class="cuadro">Semestre 7</a>
-      <a href="semestres/semestre8/index.html" class="cuadro">Semestre 8</a>
-    </section>
+  <main class="botones">
+    <a href="semestres/semestre1/index.html">Semestre 1</a>
+    <a href="semestres/semestre2/index.html">Semestre 2</a>
+    <a href="semestres/semestre3/index.html">Semestre 3</a>
+    <a href="semestres/semestre4/index.html">Semestre 4</a>
+    <a href="semestres/semestre5/index.html">Semestre 5</a>
+    <a href="semestres/semestre6/index.html">Semestre 6</a>
+    <a href="semestres/semestre7/index.html">Semestre 7</a>
+    <a href="semestres/semestre8/index.html">Semestre 8</a>
+    <a href="semestres/optativos/index.html">Cursos Optativos</a>
   </main>
-
 </body>
 </html>
-
