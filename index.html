@@ -5,8 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Repositorio de Economía</title>
   <link rel="stylesheet" href="CSS/styles.css" />
+  <style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  .fondo-animado {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  .blob {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #9b5de5, #f15bb5);
+    opacity: 0.6;
+    filter: blur(100px);
+    animation: mover 30s ease-in-out infinite;
+    border-radius: 50%;
+  }
+
+  .blob:nth-child(2) {
+    left: 60%;
+    top: 30%;
+    background: radial-gradient(circle, #00bbf9, #00f5d4);
+    animation-delay: 5s;
+  }
+
+  .blob:nth-child(3) {
+    left: 30%;
+    top: 60%;
+    background: radial-gradient(circle, #fee440, #f15bb5);
+    animation-delay: 10s;
+  }
+
+  @keyframes mover {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-100px) translateX(100px); }
+  }
+</style>
+
 </head>
 <body>
+<!-- FONDO ANIMADO -->
+<div class="fondo-animado">
+  <div class="blob"></div>
+  <div class="blob"></div>
+  <div class="blob"></div>
+</div>
 
   <header class="hero">
     <div class="hero-content">
