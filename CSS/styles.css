@@ -1,99 +1,78 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f9fc;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+}
+
+header {
   text-align: center;
+  margin-top: 30px;
 }
 
-/* Título */
 h1 {
-  font-size: 2em;
-  color: #3c3c3c;
+  font-size: 2rem;
   margin-bottom: 10px;
-}
-
-/* Logo y nombre */
-.logo-nombre {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-
-.logo-nombre img.logo {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-}
-
-.logo-nombre .nombre {
-  font-size: 1.5em;
-  font-weight: bold;
   color: #222;
 }
 
-/* Cuadrícula de semestres */
+.logo-nombre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.nombre {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Cuadros de semestres */
 .grid-semestres {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
-  width: 100%;
-  max-width: 700px;
-  padding: 10px;
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
 }
 
-/* Estilo de cada cuadro */
 .cuadro {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  background-position: center;
+  background-color: #4682b4;
   color: white;
-  font-weight: bold;
-  height: 150px;
+  text-align: center;
+  padding: 40px 0;
   text-decoration: none;
-  border-radius: 8px;
-  transition: transform 0.2s ease;
+  font-weight: bold;
+  border-radius: 12px;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-/* Efecto al pasar el mouse */
 .cuadro:hover {
-  transform: scale(1.03);
-  filter: brightness(1.05);
+  background-color: #5a9bd8;
+  transform: translateY(-3px);
 }
 
-/* Colores de los cuadros */
-.cuadro:nth-child(1) { background-color: #e57373; } /* rojo claro */
-.cuadro:nth-child(2) { background-color: #64b5f6; } /* azul claro */
-.cuadro:nth-child(3) { background-color: #81c784; } /* verde claro */
-.cuadro:nth-child(4) { background-color: #ba68c8; } /* púrpura */
-.cuadro:nth-child(5) { background-color: #4dd0e1; } /* cian */
-.cuadro:nth-child(6) { background-color: #ffb74d; } /* naranja */
-.cuadro:nth-child(7) { background-color: #7986cb; } /* azul lavanda */
-.cuadro:nth-child(8) { background-color: #f06292; } /* rosa */
-
-/* Responsivo para teléfonos */
+/* Adaptabilidad */
 @media (max-width: 600px) {
-  .grid-semestres {
-    grid-template-columns: 1fr;
+  h1 {
+    font-size: 1.4rem;
   }
 
-  .logo-nombre {
-    flex-direction: column;
-  }
-
-  .logo-nombre img.logo {
-    margin-bottom: 10px;
+  .cuadro {
+    padding: 30px 0;
   }
 }
