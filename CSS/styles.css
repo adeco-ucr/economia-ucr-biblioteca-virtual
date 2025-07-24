@@ -1,75 +1,65 @@
-/* Estilo general */
+/* Reset básico */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f8f8f8;
-  color: #333;
-}
-
-/* Hero */
-.hero {
-  background: url('../CSS/bg.jpg') no-repeat center center/cover;
-  padding: 5rem 2rem;
-  text-align: center;
-  color: white;
-}
-
-.hero-content h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-}
-
-.logo-nombre {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  padding: 20px;
+}
+
+/* Encabezado */
+header {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .logo {
-  width: 60px;
+  width: 100px;
   height: auto;
+  margin-bottom: 10px;
 }
 
-.nombre {
-  font-size: 1.3rem;
-  font-weight: 600;
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.adeco {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #007acc;
 }
 
 /* Cuadros de semestre */
-.semestres {
-  padding: 3rem 1rem;
-  display: flex;
-  justify-content: center;
-}
-
-.grid-semestres {
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  max-width: 900px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
   width: 100%;
+  max-width: 500px;
 }
 
 .cuadro {
-  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  background-color: #007acc;
   color: white;
-  text-align: center;
-  padding: 3rem 1rem;
   text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
+  padding: 20px;
+  text-align: center;
   border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s, background-color 0.3s;
+  font-weight: bold;
 }
 
 .cuadro:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  background-color: #005a99;
 }
