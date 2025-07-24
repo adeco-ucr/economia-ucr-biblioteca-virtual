@@ -6,76 +6,80 @@
 }
 
 body {
-  background-color: #111; /* Fondo oscuro temporal */
-  color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
   min-height: 100vh;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
-/* Logo */
-.logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1rem;
+/* Encabezado */
+.header {
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative;
 }
 
 .logo {
-  height: 80px;
+  width: 80px;
+  height: auto;
+  margin-bottom: 0.5rem;
 }
 
-/* Título y autor */
 .titulo {
   font-size: 2rem;
-  letter-spacing: 2px;
-  font-weight: bold;
-  margin: 0.5rem 0;
+  margin-bottom: 1rem;
 }
 
-.autor {
-  font-size: 1rem;
-  color: #aaa;
-  margin-bottom: 2rem;
-}
-
-/* Líneas blancas decorativas */
-.linea-horizontal-top,
-.linea-horizontal-bottom {
-  width: 80%;
-  height: 1px;
+/* Línea vertical decorativa */
+.linea-vertical {
+  width: 2px;
+  height: 60px;
   background-color: white;
-  margin: 0.5rem auto;
+  margin: 0 auto;
 }
 
-/* Botones */
-.botones {
+/* Cuadros de semestres */
+.contenedor-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1rem;
-  width: 100%;
-  max-width: 800px;
-  margin-top: 2rem;
+  gap: 1.5rem;
+  width: 90%;
+  max-width: 1000px;
+  padding: 2rem 1rem;
 }
 
-.botones a {
-  display: block;
-  padding: 1rem;
-  background-color: transparent;
-  border: 2px solid white;
+.cuadro {
+  background: linear-gradient(135deg, #2e7d32, #66bb6a);
   color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 12px;
   text-decoration: none;
-  transition: 0.3s ease;
+  font-size: 1.1rem;
   font-weight: bold;
-  letter-spacing: 1px;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.botones a:hover {
+.cuadro:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(135deg, #388e3c, #81c784);
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  color: #aaaaaa;
+}
+
+.linea-horizontal {
+  height: 1px;
   background-color: white;
-  color: #111;
+  width: 80%;
+  margin: 0 auto 1rem;
 }
