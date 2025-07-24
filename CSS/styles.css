@@ -19,7 +19,6 @@ body {
 .header {
   text-align: center;
   padding: 2rem 1rem 1rem 1rem;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,19 +48,30 @@ body {
   margin-top: 0.2rem;
 }
 
-.decoracion-vertical {
-  width: 2px;
-  height: 80px;
+/* Líneas horizontales */
+.decoracion-horizontal {
+  height: 2px;
   background-color: white;
-  margin-top: 1rem;
+  width: 80%;
+  margin: 1.5rem auto;
 }
 
-/* Botones */
+.decoracion-horizontal.superior {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.decoracion-horizontal.inferior {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Cuadros */
 .contenedor-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 1.5rem;
-  padding: 2rem 1rem;
+  padding: 1rem;
   width: 90%;
   max-width: 1000px;
 }
@@ -82,14 +92,6 @@ body {
 .cuadro:hover {
   transform: translateY(-4px);
   background: linear-gradient(135deg, #388e3c, #81c784);
-}
-
-/* Línea horizontal decorativa */
-.decoracion-horizontal {
-  height: 2px;
-  width: 80%;
-  background-color: white;
-  margin: 2rem auto 1rem;
 }
 
 /* Footer */
