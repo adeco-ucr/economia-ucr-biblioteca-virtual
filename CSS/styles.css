@@ -1,78 +1,99 @@
-/* Estilos generales */
-body {
-  font-family: sans-serif;
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
-  text-align: center;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
 }
 
-header {
-  padding: 1em;
-  background-color: #f0f0f0;
+/* Título */
+h1 {
+  font-size: 2em;
+  color: #3c3c3c;
+  margin-bottom: 10px;
 }
 
-header h1 {
-  font-size: 1.8em;
-  margin-bottom: 0.5em;
-}
-
+/* Logo y nombre */
 .logo-nombre {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1em;
+  margin-bottom: 30px;
 }
 
-.logo {
+.logo-nombre img.logo {
   width: 50px;
-  height: auto;
+  height: 50px;
+  margin-right: 10px;
 }
 
-.nombre {
-  font-size: 1.4em;
+.logo-nombre .nombre {
+  font-size: 1.5em;
   font-weight: bold;
+  color: #222;
 }
 
-/* Cuadros de los semestres */
+/* Cuadrícula de semestres */
 .grid-semestres {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1em;
-  padding: 2em;
-  max-width: 600px;
-  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  gap: 20px;
+  width: 100%;
+  max-width: 700px;
+  padding: 10px;
 }
 
+/* Estilo de cada cuadro */
 .cuadro {
-  background-color: #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
   color: white;
-  text-decoration: none;
-  padding: 2em;
-  border-radius: 10px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  height: 150px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
 }
 
+/* Efecto al pasar el mouse */
 .cuadro:hover {
-  background-color: #0056b3;
+  transform: scale(1.03);
+  filter: brightness(1.05);
 }
 
-/* Responsivo */
+/* Colores de los cuadros */
+.cuadro:nth-child(1) { background-color: #e57373; } /* rojo claro */
+.cuadro:nth-child(2) { background-color: #64b5f6; } /* azul claro */
+.cuadro:nth-child(3) { background-color: #81c784; } /* verde claro */
+.cuadro:nth-child(4) { background-color: #ba68c8; } /* púrpura */
+.cuadro:nth-child(5) { background-color: #4dd0e1; } /* cian */
+.cuadro:nth-child(6) { background-color: #ffb74d; } /* naranja */
+.cuadro:nth-child(7) { background-color: #7986cb; } /* azul lavanda */
+.cuadro:nth-child(8) { background-color: #f06292; } /* rosa */
+
+/* Responsivo para teléfonos */
 @media (max-width: 600px) {
   .grid-semestres {
     grid-template-columns: 1fr;
   }
 
-  header h1 {
-    font-size: 1.2em;
+  .logo-nombre {
+    flex-direction: column;
   }
 
-  .nombre {
-    font-size: 1em;
-  }
-
-  .logo {
-    width: 40px;
+  .logo-nombre img.logo {
+    margin-bottom: 10px;
   }
 }
