@@ -1,11 +1,10 @@
-/* Reset general */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Fondo y fuente */
 body {
   background-color: #121212;
   color: #ffffff;
@@ -19,8 +18,11 @@ body {
 /* Encabezado */
 .header {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 1rem 1rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .logo {
@@ -29,20 +31,32 @@ body {
   margin-bottom: 1rem;
 }
 
-.titulo {
-  font-size: 2rem;
-  font-weight: bold;
+.titulo-contenedor {
+  text-align: center;
   margin-bottom: 1rem;
 }
 
-.linea-vertical {
-  width: 2px;
-  height: 60px;
-  background-color: white;
-  margin: 0 auto;
+.adeco {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-/* Cuadros de semestres */
+.subtitulo {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #cccccc;
+  margin-top: 0.2rem;
+}
+
+.decoracion-vertical {
+  width: 2px;
+  height: 80px;
+  background-color: white;
+  margin-top: 1rem;
+}
+
+/* Botones */
 .contenedor-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -70,18 +84,19 @@ body {
   background: linear-gradient(135deg, #388e3c, #81c784);
 }
 
+/* Línea horizontal decorativa */
+.decoracion-horizontal {
+  height: 2px;
+  width: 80%;
+  background-color: white;
+  margin: 2rem auto 1rem;
+}
+
 /* Footer */
 .footer {
   margin-top: auto;
   text-align: center;
-  padding: 1.5rem;
+  padding: 1rem;
   font-size: 0.9rem;
   color: #aaaaaa;
-}
-
-.linea-horizontal {
-  height: 1px;
-  background-color: white;
-  width: 80%;
-  margin: 0 auto 1rem;
 }
