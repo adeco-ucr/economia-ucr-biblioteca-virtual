@@ -7,14 +7,26 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #0e0e0e;
   color: #fff;
   line-height: 1.6;
 
-  /* Fondo con degradado vertical sutil */
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.025), rgba(0, 0, 0, 0.25));
-  background-repeat: no-repeat;
+  /* Fondo con degradado vertical y textura radial sutil */
+  background:
+    linear-gradient(to bottom, #121212 0%, #0e0e0e 100%),
+    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.03), transparent 60%),
+    radial-gradient(circle at 75% 40%, rgba(255, 255, 255, 0.025), transparent 60%);
+  background-blend-mode: overlay;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.semestre:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.semestre:nth-of-type(even) {
+  background-color: rgba(255, 255, 255, 0.04);
 }
 
 /* Encabezado */
@@ -70,21 +82,6 @@ body {
   font-size: 1.2rem;
   font-weight: 400;
   color: #ccc;
-}
-
-.decoracion-horizontal {
-  height: 4px;
-  background-color: white;
-  width: 80%;
-  margin: 20px auto;
-}
-
-.decoracion-horizontal.superior {
-  margin-top: 0;
-}
-
-.decoracion-horizontal.inferior {
-  margin-bottom: 0;
 }
 
 /* Sección del semestre */
