@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* FONDO ANIMADO + FUENTE POPPINS */
+/* FONDO ANIMADO Y FUENTE */
 body {
   background: linear-gradient(-45deg, #1b1b1b, #202020, #1e1e1e, #121212);
   background-size: 400% 400%;
@@ -27,7 +27,7 @@ body {
 /* ENCABEZADO */
 .header {
   text-align: center;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 2rem 1rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,33 +80,40 @@ body {
   margin-bottom: 1rem;
 }
 
-/* GRID DE BOTONES */
-.contenedor-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1.5rem;
-  padding: 1rem;
-  width: 90%;
+/* SEMESTRES */
+.semestre {
+  margin: 2rem auto;
   max-width: 1000px;
+  width: 90%;
 }
 
-.cuadro {
-  display: block;
-  background: linear-gradient(135deg, #2e7d32, #66bb6a);
+.semestre h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #66bb6a;
+  text-align: left;
+}
+
+/* CURSOS */
+.cursos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.curso {
+  background: linear-gradient(135deg, #1e88e5, #64b5f6);
   color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
   text-decoration: none;
-  font-size: 1.1rem;
   font-weight: bold;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.cuadro:hover {
-  transform: scale(1.08);
-  box-shadow: 0 10px 18px rgba(255, 255, 255, 0.15);
-  background: linear-gradient(135deg, #43a047, #a5d6a7);
+.curso:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
 }
 
 /* FOOTER */
@@ -119,16 +126,16 @@ body {
   animation: fadeIn 2s ease forwards;
 }
 
-/* ANIMACIONES BÁSICAS */
+/* ANIMACIONES */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-/* RESPONSIVE DESIGN */
+/* RESPONSIVO */
 @media (max-width: 768px) {
-  .cuadro {
-    padding: 1.5rem 1rem;
+  .curso {
+    padding: 1.2rem 1rem;
     font-size: 1rem;
   }
 
@@ -144,15 +151,21 @@ body {
     font-size: 1rem;
   }
 
-  .contenedor-grid {
-    gap: 1rem;
+  .semestre h2 {
+    text-align: center;
+  }
+
+  .cursos {
+    justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
-  .cuadro {
+  .curso {
     font-size: 0.95rem;
-    padding: 1.2rem 0.8rem;
+    padding: 1rem 0.8rem;
+    width: 100%;
+    text-align: center;
   }
 
   .adeco {
@@ -163,7 +176,8 @@ body {
     font-size: 0.9rem;
   }
 
-  .contenedor-grid {
-    grid-template-columns: 1fr;
+  .cursos {
+    flex-direction: column;
+    align-items: center;
   }
 }
