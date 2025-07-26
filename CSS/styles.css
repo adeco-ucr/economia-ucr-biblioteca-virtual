@@ -164,3 +164,37 @@ body {
   color: #ccc;
   border-top: 1px solid #444;
 }
+
+.social-buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  background-size: 22px 22px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: scale(1.1);
+}
+
+.social-icon.instagram {
+  background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg');
+  filter: invert(1);
+}
+
+.social-icon.whatsapp {
+  background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg');
+  filter: invert(1);
+}
