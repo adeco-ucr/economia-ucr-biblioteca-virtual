@@ -71,14 +71,14 @@ body {
   color: #f2f2f2;
 }
 
-/* Contenedor principal que centra */
+/* Contenedor para centrar los botones */
 .cursos-wrapper {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-/* Contenedor de botones como filas flexibles */
+/* Botonera */
 .cursos {
   display: flex;
   flex-wrap: wrap;
@@ -87,9 +87,11 @@ body {
   max-width: 800px;
 }
 
-/* Botones con tamaño fijo */
+/* Botones */
 .curso {
-  width: 180px;
+  width: calc(25% - 20px); /* hasta 4 por fila */
+  min-width: 140px;
+  max-width: 180px;
   height: 120px;
   background: linear-gradient(135deg, #1e90ff, #00bfff);
   color: white;
@@ -101,17 +103,24 @@ body {
   text-align: center;
   padding: 10px;
   transition: background-color 0.3s, transform 0.2s;
-  border: none;
   font-size: 0.95rem;
   font-weight: 600;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   word-wrap: break-word;
+  border: none;
 }
 
 /* Hover */
 .curso:hover {
   background: linear-gradient(135deg, #3399ff, #1fcfff);
   transform: scale(1.05);
+}
+
+/* Responsive: mínimo 2 columnas */
+@media (max-width: 600px) {
+  .curso {
+    width: calc(50% - 20px); /* Fuerza mínimo 2 por fila */
+  }
 }
 
 /* Footer */
