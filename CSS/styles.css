@@ -102,12 +102,14 @@ body {
   font-size: 0.9rem;
   font-weight: 500;
   word-wrap: break-word;
-  transition: transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* sombra nueva */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* transición nueva */
 }
 
 .curso:hover {
-  background-color: #333;
-  transform: scale(1.03);
+  background-color: #0059b3; /* un azul más oscuro */
+  transform: scale(1.05); /* más notorio */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35); /* sombra más fuerte al hacer hover */
 }
 
 /* ⬇️ Garantiza 2 columnas mínimo en celular */
@@ -115,6 +117,12 @@ body {
   .cursos {
     grid-template-columns: repeat(2, 1fr);
     max-width: 400px;
+  }
+
+  .curso {
+    height: 90px;          /* Más compacto */
+    font-size: 0.85rem;     /* Texto un poco más pequeño */
+    padding: 8px;           /* Menos padding interno */
   }
 }
 
