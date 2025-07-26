@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Fuente principal */
+/* Fuente principal y fondo */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #0e0e0e;
@@ -71,29 +71,27 @@ body {
   color: #f2f2f2;
 }
 
-/* Contenedor para centrar los botones */
+/* Contenedor principal de cursos */
 .cursos-wrapper {
   display: flex;
   justify-content: center;
-  width: 100%;
 }
 
-/* Botonera */
+/* Grid de cursos */
 .cursos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 20px;
   max-width: 800px;
+  width: 100%;
+  justify-items: center;
 }
 
-/* Botones */
+/* Botón de curso */
 .curso {
-  width: calc(25% - 20px); /* hasta 4 por fila */
-  min-width: 140px;
-  max-width: 180px;
-  height: 120px;
-  background: linear-gradient(135deg, #1e90ff, #00bfff);
+  width: 180px;
+  height: 100px;
+  background: linear-gradient(to right, #007bff, #00c6ff);
   color: white;
   border-radius: 12px;
   text-decoration: none;
@@ -103,24 +101,17 @@ body {
   text-align: center;
   padding: 10px;
   transition: background-color 0.3s, transform 0.2s;
-  font-size: 0.95rem;
-  font-weight: 600;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  word-wrap: break-word;
   border: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
-/* Hover */
+/* Efecto hover */
 .curso:hover {
-  background: linear-gradient(135deg, #3399ff, #1fcfff);
-  transform: scale(1.05);
-}
-
-/* Responsive: mínimo 2 columnas */
-@media (max-width: 600px) {
-  .curso {
-    width: calc(50% - 20px); /* Fuerza mínimo 2 por fila */
-  }
+  background-color: #333;
+  transform: scale(1.03);
 }
 
 /* Footer */
@@ -130,4 +121,12 @@ body {
   font-size: 0.9rem;
   color: #ccc;
   border-top: 1px solid #444;
+}
+
+/* Responsive: mínimo 2 columnas */
+@media (max-width: 500px) {
+  .cursos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
 }
