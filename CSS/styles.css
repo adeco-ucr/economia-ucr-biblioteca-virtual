@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Fuente principal y fondo */
+/* Estilo base */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #0e0e0e;
@@ -71,20 +71,20 @@ body {
   color: #f2f2f2;
 }
 
-/* Contenedor principal de cursos */
+/* Contenedor para centrar cursos */
 .cursos-wrapper {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
-/* Grid de cursos */
+/* Contenedor grid con centrado de botones */
 .cursos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 20px;
-  max-width: 800px;
-  width: 100%;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  max-width: 760px; /* 180px * 4 + espacios */
+  justify-content: center;
+  gap: 20px 30px;
 }
 
 /* Botón de curso */
@@ -108,7 +108,7 @@ body {
   overflow-wrap: break-word;
 }
 
-/* Efecto hover */
+/* Hover efecto */
 .curso:hover {
   background-color: #333;
   transform: scale(1.03);
@@ -121,12 +121,4 @@ body {
   font-size: 0.9rem;
   color: #ccc;
   border-top: 1px solid #444;
-}
-
-/* Responsive: mínimo 2 columnas */
-@media (max-width: 500px) {
-  .cursos {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
 }
