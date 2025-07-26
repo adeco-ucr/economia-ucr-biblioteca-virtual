@@ -4,6 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ADECO - Apuntes de Economía UCR</title>
+
+  <!-- Fuente Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Animaciones AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Hoja de estilos -->
   <link rel="stylesheet" href="CSS/styles.css" />
 </head>
 <body>
@@ -15,19 +23,18 @@
     </div>
   </header>
 
-  <!-- Nueva línea horizontal blanca entre el header y los botones -->
   <div class="decoracion-horizontal superior"></div>
 
   <main class="contenedor-grid">
-    <a href="semestres/semestre1/" class="cuadro">1° Semestre</a>
-    <a href="semestres/semestre2/" class="cuadro">2° Semestre</a>
-    <a href="semestres/semestre3/" class="cuadro">3° Semestre</a>
-    <a href="semestres/semestre4/" class="cuadro">4° Semestre</a>
-    <a href="semestres/semestre5/" class="cuadro">5° Semestre</a>
-    <a href="semestres/semestre6/" class="cuadro">6° Semestre</a>
-    <a href="semestres/semestre7/" class="cuadro">7° Semestre</a>
-    <a href="semestres/semestre8/" class="cuadro">8° Semestre</a>
-    <a href="semestres/optativos/" class="cuadro">Cursos Optativos</a>
+    <a href="semestres/semestre1/" class="cuadro" data-aos="fade-up">1° Semestre</a>
+    <a href="semestres/semestre2/" class="cuadro" data-aos="fade-up">2° Semestre</a>
+    <a href="semestres/semestre3/" class="cuadro" data-aos="fade-up">3° Semestre</a>
+    <a href="semestres/semestre4/" class="cuadro" data-aos="fade-up">4° Semestre</a>
+    <a href="semestres/semestre5/" class="cuadro" data-aos="fade-up">5° Semestre</a>
+    <a href="semestres/semestre6/" class="cuadro" data-aos="fade-up">6° Semestre</a>
+    <a href="semestres/semestre7/" class="cuadro" data-aos="fade-up">7° Semestre</a>
+    <a href="semestres/semestre8/" class="cuadro" data-aos="fade-up">8° Semestre</a>
+    <a href="semestres/optativos/" class="cuadro" data-aos="fade-up">Cursos Optativos</a>
   </main>
 
   <div class="decoracion-horizontal inferior"></div>
@@ -35,5 +42,11 @@
   <footer class="footer">
     <p>© 2025 ADECO - Universidad de Costa Rica</p>
   </footer>
+
+  <!-- Scripts de animación -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
