@@ -1,189 +1,109 @@
-/* RESET */
-* {
+/* Fuente general */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0e0e0e;
+  color: #ffffff;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-/* FONDO ANIMADO Y FUENTE */
-body {
-  background: linear-gradient(-45deg, #1b1b1b, #202020, #1e1e1e, #121212);
-  background-size: 400% 400%;
-  animation: fondoOndulado 10s ease infinite;
-  color: #ffffff;
-  font-family: 'Poppins', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-}
-
-@keyframes fondoOndulado {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* ENCABEZADO */
+/* Título */
 .header {
-  text-align: center;
-  padding: 2rem 1rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
 }
 
 .logo {
-  width: 90px;
+  width: 100px;
   height: auto;
-  margin-bottom: 1rem;
-  animation: fadeIn 1s ease forwards;
 }
 
 .titulo-contenedor {
   text-align: center;
-  margin-bottom: 1rem;
 }
 
 .adeco {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
-  letter-spacing: 1px;
-  animation: fadeIn 1s ease forwards;
+  margin: 10px 0 0 0;
 }
 
 .subtitulo {
-  font-size: 1.2rem;
-  font-weight: normal;
-  color: #cccccc;
-  margin-top: 0.2rem;
-  animation: fadeIn 1.5s ease forwards;
+  font-size: 1rem;
+  color: #aaa;
+  margin: 5px 0 0 0;
 }
 
-/* LÍNEAS DECORATIVAS */
+/* Línea decorativa */
 .decoracion-horizontal {
   height: 2px;
-  background-color: white;
-  width: 80%;
-  margin: 1.5rem auto;
-  opacity: 0;
-  animation: fadeIn 1.8s ease forwards;
+  background-color: #444;
+  margin: 20px 0;
 }
 
-.decoracion-horizontal.superior {
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
+.superior {
+  margin-top: 10px;
 }
 
-.decoracion-horizontal.inferior {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+.inferior {
+  margin-bottom: 20px;
 }
 
-/* SEMESTRES */
+/* Contenedor de semestre */
 .semestre {
-  margin: 2rem auto;
+  margin: 20px auto;
+  padding: 0 20px;
   max-width: 1000px;
-  width: 90%;
 }
 
 .semestre h2 {
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-  color: #66bb6a;
-  text-align: left;
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 10px;
 }
 
-/* CURSOS */
+/* Cursos */
 .cursos {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 10px;
+  justify-content: flex-start;
 }
 
 .curso {
-  background: linear-gradient(135deg, #1e88e5, #64b5f6);
+  background: linear-gradient(to right, #2f80ed, #56ccf2);
   color: white;
-  padding: 1rem 1.5rem;
+  padding: 10px 16px;
   border-radius: 10px;
   text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  font-size: 1rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease, background 0.3s ease;
 }
 
 .curso:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
-  background: linear-gradient(135deg, #1565c0, #42a5f5);
+  background: linear-gradient(to right, #56ccf2, #2f80ed);
 }
 
-/* FOOTER */
+/* Footer */
 .footer {
-  margin-top: auto;
   text-align: center;
-  padding: 1rem;
   font-size: 0.9rem;
-  color: #aaaaaa;
-  animation: fadeIn 2s ease forwards;
+  color: #aaa;
+  padding: 20px;
+  margin-top: 40px;
 }
 
-/* ANIMACIONES */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
+/* Responsividad */
+@media screen and (max-width: 600px) {
   .curso {
-    padding: 1.2rem 1rem;
-    font-size: 1rem;
-  }
-
-  .logo {
-    width: 70px;
-  }
-
-  .adeco {
-    font-size: 2rem;
-  }
-
-  .subtitulo {
-    font-size: 1rem;
-  }
-
-  .semestre h2 {
+    flex: 1 1 100%;
     text-align: center;
-  }
-
-  .cursos {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .curso {
-    font-size: 0.95rem;
-    padding: 1rem 0.8rem;
-    width: 100%;
-    text-align: center;
-    background: linear-gradient(135deg, #1e88e5, #64b5f6);
-    color: white;
-    border-radius: 10px;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .adeco {
-    font-size: 1.8rem;
-  }
-
-  .subtitulo {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    padding: 12px;
   }
 
   .cursos {
