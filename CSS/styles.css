@@ -10,15 +10,45 @@ body {
   background-color: #0e0e0e;
   color: #fff;
   line-height: 1.6;
+
+  /* Fondo con degradado vertical sutil */
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.025), rgba(0, 0, 0, 0.25));
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Encabezado */
 .header {
+  position: relative;
   display: flex;
   align-items: center;
-  padding: 20px;
   justify-content: center;
   flex-direction: column;
+  padding: 60px 20px;
+  text-align: center;
+
+  /* Fondo con tu imagen personalizada */
+  background-image: url('../imagenes/econ-wallpaper-header.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Estética adicional */
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45); /* Puedes ajustar la opacidad */
+  z-index: 1;
+}
+
+.header * {
+  position: relative;
+  z-index: 2;
 }
 
 .logo {
