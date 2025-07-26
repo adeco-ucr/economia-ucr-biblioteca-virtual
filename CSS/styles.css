@@ -12,9 +12,9 @@ body {
 
   /* Fondo con degradado vertical y textura radial sutil */
   background:
-    linear-gradient(to bottom, #121212 0%, #0e0e0e 100%),
-    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.03), transparent 60%),
-    radial-gradient(circle at 75% 40%, rgba(255, 255, 255, 0.025), transparent 60%);
+    linear-gradient(to bottom, #1c1f22 0%, #181a1d 100%),
+    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.035), transparent 60%),
+    radial-gradient(circle at 75% 40%, rgba(255, 255, 255, 0.03), transparent 60%);
   background-blend-mode: overlay;
   background-size: cover;
   background-repeat: no-repeat;
@@ -64,9 +64,12 @@ body {
 }
 
 .logo {
-  width: 100px;
-  height: auto;
-  margin-bottom: 10px;
+  width: 160px;              /* Aumentamos el tamaño */
+  height: 160px;
+  border-radius: 50%;        /* Hace el logo circular */
+  object-fit: cover;         /* Asegura que se recorte bien dentro del círculo */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra elegante */
+  margin-bottom: 20px;
 }
 
 .titulo-contenedor {
@@ -117,7 +120,7 @@ body {
 .curso {
   width: 180px;
   height: 100px;
-  background: linear-gradient(to right, #007bff, #00c6ff);
+  background: linear-gradient(to right, #00577a, #008080);
   color: white;
   border-radius: 12px;
   text-decoration: none;
