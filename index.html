@@ -7,9 +7,6 @@
   <!-- Fuente elegante -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- AOS: animaciones al hacer scroll -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
   <!-- Font Awesome para íconos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -21,7 +18,7 @@
   <header class="header">
     <div class="header-overlay"></div>
     <img src="imagenes/logo.jpg" alt="Logo ADECO" class="logo" />
-    <div class="titulo-contenedor">
+    <div class="titulo-contenedor contenido-header">
       <h1 class="adeco">ADECO</h1>
       <h2 class="subtitulo">Apuntes de Economía UCR</h2>
       <div class="social-buttons">
@@ -31,9 +28,8 @@
     </div>
   </header>
 
-
   <!-- SEMESTRE 1 -->
-  <section class="semestre" data-aos="fade-up">
+  <section class="semestre">
     <h2>📘 Semestre 1</h2>
     <div class="cursos-wrapper">
       <div class="cursos">
@@ -46,7 +42,7 @@
   </section>
 
   <!-- SEMESTRE 2 -->
-  <section class="semestre" data-aos="fade-up">
+  <section class="semestre">
     <h2>📘 Semestre 2</h2>
     <div class="cursos-wrapper">
       <div class="cursos">
@@ -58,7 +54,7 @@
   </section>
 
   <!-- SEMESTRE 3 -->
-  <section class="semestre" data-aos="fade-up">
+  <section class="semestre">
     <h2>📘 Semestre 3</h2>
     <div class="cursos-wrapper">
       <div class="cursos">
@@ -72,7 +68,7 @@
   </section>
 
   <!-- SEMESTRE 4 -->
-  <section class="semestre" data-aos="fade-up">
+  <section class="semestre">
     <h2>📘 Semestre 4</h2>
     <div class="cursos-wrapper">
       <div class="cursos">
@@ -86,7 +82,7 @@
   </section>
 
   <!-- SEMESTRE 5 -->
-  <section class="semestre" data-aos="fade-up">
+  <section class="semestre">
     <h2>📘 Semestre 5</h2>
     <div class="cursos-wrapper">
       <div class="cursos">
@@ -101,7 +97,7 @@
   </section>
 
   <!-- SEMESTRE 6 -->
-  <section class="semestre" data-aos="fade-up">
+  <section class="semestre">
     <h2>📘 Semestre 6</h2>
     <div class="cursos-wrapper">
       <div class="cursos">
@@ -116,7 +112,7 @@
   </section>
 
   <!-- SEMESTRE 7 -->
-  <section class="semestre" data-aos="fade-up">
+  <section class="semestre">
     <h2>📘 Semestre 7</h2>
     <div class="cursos-wrapper">
       <div class="cursos">
@@ -127,7 +123,7 @@
   </section>
 
   <!-- SEMESTRE 8 -->
-  <section class="semestre" data-aos="fade-up">
+  <section class="semestre">
     <h2>📘 Semestre 8</h2>
     <div class="cursos-wrapper">
       <div class="cursos">
@@ -137,7 +133,7 @@
   </section>
 
   <!-- OPTATIVOS -->
-  <section class="semestre" data-aos="fade-up">
+  <section class="semestre">
     <h2>📘 Cursos Optativos</h2>
     <div class="cursos-wrapper">
       <div class="cursos">
@@ -151,11 +147,31 @@
   <footer class="footer">
     <p>© 2025 ADECO - Universidad de Costa Rica</p>
   </footer>
+  <!-- Librería ScrollReveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
 
-  <!-- Script de animación AOS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Configuración de animaciones -->
   <script>
-    AOS.init();
+    ScrollReveal().reveal('.semestre', {
+      origin: 'bottom',
+      distance: '40px',
+      duration: 800,
+      easing: 'ease-in-out',
+      opacity: 0,
+      scale: 0.98,
+      reset: true
+    });
+
+    // Animación para el encabezado
+      ScrollReveal().reveal('.contenido-header', {
+      distance: '0px',         // sin desplazamiento
+      opacity: 0,
+      duration: 1200,          // animación más pausada
+      easing: 'ease-out',
+      scale: 0.85,             // pequeño efecto de "zoom in"
+      reset: false
+    });  
   </script>
+
 </body>
 </html>

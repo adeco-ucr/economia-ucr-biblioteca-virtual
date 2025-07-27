@@ -198,3 +198,55 @@ body {
   background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg');
   filter: invert(1);
 }
+
+@media (max-width: 600px) {
+  body {
+    background:
+      linear-gradient(to bottom, #2a2d30 0%, #1e2023 100%),
+      radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.04), transparent 60%),
+      radial-gradient(circle at 70% 40%, rgba(255, 255, 255, 0.03), transparent 60%);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.semestre {
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.semestre:not(:last-of-type)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 90%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.05), transparent);
+  opacity: 0.7;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* capa oscura inicial */
+  z-index: 1;
+  animation: fadeOverlay 1.5s ease-out forwards;
+}
+
+@keyframes fadeOverlay {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Asegúrate de que el contenido esté por encima */
+.logo,
+.titulo-contenedor {
+  position: relative;
+  z-index: 2;
+}
