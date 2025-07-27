@@ -162,6 +162,7 @@ body {
 
 .curso:hover {
   animation: crecerSuave 0.25s ease forwards;
+  filter: brightness(1.4);
 }
 
 @keyframes crecerSuave {
