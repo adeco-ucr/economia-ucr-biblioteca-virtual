@@ -161,25 +161,22 @@ body {
 }
 
 .curso:hover {
-  transform: scale(1.06);
-  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.2);
-  animation: bounceSoft 0.6s ease infinite;
+  animation: crecerSuave 0.25s ease forwards;
+}
+
+@keyframes crecerSuave {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
 }
 
 /* efecto al hacer clic */
 .curso:active {
   transform: scale(0.96);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-}
-
-/* Animación de rebote suave */
-@keyframes bounceSoft {
-  0%, 100% {
-    transform: scale(1.06);
-  }
-  50% {
-    transform: scale(1.08);
-  }
 }
 
 /* ⬇️ Garantiza 2 columnas mínimo en celular */
