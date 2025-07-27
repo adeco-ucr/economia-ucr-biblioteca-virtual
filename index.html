@@ -15,6 +15,11 @@
 
 </head>
 <body>
+  <!-- Loader (al inicio del body) -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
   <header class="header">
     <div class="header-overlay"></div>
     <img src="imagenes/logo.jpg" alt="Logo ADECO" class="logo" />
@@ -180,6 +185,10 @@
       duration: 500,
       scale: 0.95,
       reset: false
+    });
+
+    window.addEventListener("load", () => {
+      document.getElementById("loader").style.display = "none";
     });
 
   </script>
