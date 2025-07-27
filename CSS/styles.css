@@ -88,6 +88,7 @@ body {
 .logo {
   width: 160px;              /* Aumentamos el tamaño */
   height: 160px;
+  aspect-ratio: 1 / 1;       /* ⬅️ Esta línea es clave */
   border-radius: 50%;        /* Hace el logo circular */
   object-fit: cover;         /* Asegura que se recorte bien dentro del círculo */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra elegante */
@@ -292,6 +293,8 @@ body {
 @media (max-width: 600px) {
   .logo {
     width: 100px;
+    height: 100px;
+    aspect-ratio: 1 / 1; /* ⬅️ Esto asegura que sea perfectamente circular */
   }
 
   .adeco {
