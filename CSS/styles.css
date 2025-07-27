@@ -305,3 +305,26 @@ body {
     font-size: 1rem;
   }
 }
+
+.btn-volver {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: linear-gradient(135deg, #00bcd4, #007c91);
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.3);
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+
+.btn-volver:hover {
+  background: linear-gradient(135deg, #00e5ff, #00838f);
+  transform: scale(1.07);
+  box-shadow: 0 6px 16px rgba(0, 229, 255, 0.4);
+}
+
