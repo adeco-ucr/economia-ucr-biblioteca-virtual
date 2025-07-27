@@ -250,3 +250,33 @@ body {
   position: relative;
   z-index: 2;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111;
+    color: #f5f5f5;
+  }
+
+  .curso {
+    background-color: #1a1a1a;
+    color: white;
+  }
+
+  .curso:hover {
+    background-color: #333;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    width: 100px;
+  }
+
+  .adeco {
+    font-size: 1.8rem;
+  }
+
+  .subtitulo {
+    font-size: 1rem;
+  }
+}
