@@ -138,11 +138,12 @@ body {
   justify-content: center;
 }
 
-/* ⬇️ Botón curso */
+/* ⬇️ Botón curso con rebote y brillo */
 .curso {
   width: 180px;
   height: 100px;
-  background: linear-gradient(to right, #00577a, #008080);
+  background: linear-gradient(270deg, #00577a, #008080);
+  background-size: 400% 400%;
   color: white;
   border-radius: 12px;
   text-decoration: none;
@@ -154,14 +155,31 @@ body {
   font-size: 0.9rem;
   font-weight: 500;
   word-wrap: break-word;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* sombra nueva */
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* transición nueva */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: none;
 }
 
 .curso:hover {
-  background-color: #0059b3; /* un azul más oscuro */
-  transform: scale(1.05); /* más notorio */
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35); /* sombra más fuerte al hacer hover */
+  transform: scale(1.06);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.2);
+  animation: bounceSoft 0.6s ease infinite;
+}
+
+/* efecto al hacer clic */
+.curso:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Animación de rebote suave */
+@keyframes bounceSoft {
+  0%, 100% {
+    transform: scale(1.06);
+  }
+  50% {
+    transform: scale(1.08);
+  }
 }
 
 /* ⬇️ Garantiza 2 columnas mínimo en celular */
