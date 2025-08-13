@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acerca del Repositorio | ADECO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/styles.css" />
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="header">
+    <div class="header-overlay"></div>
+    <a href="index.html" class="btn-volver" title="Volver al inicio">← Volver</a>
+    <img src="imagenes/logo.jpg" alt="Logo ADECO" class="logo" />
+    <div class="titulo-contenedor contenido-header">
+      <h1 class="adeco">ADECO</h1>
+      <h2 class="subtitulo">Información sobre el Repositorio ADECO</h2>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="secciones-curso">
+    
+    <section class="semestre">
+        <h2>📌 Sobre este proyecto</h2>
+        <p style="max-width: 700px; margin: 0 auto; line-height: 1.7;">
+            Este repositorio es una iniciativa académica impulsada por la Asociación de Estudiantes de Economía (ADECO) con el propósito de facilitar el acceso a materiales de estudio relevantes para la carrera. Fue desarrollado por Ghael Ramírez, miembro de la junta directiva 2025–2026, con la valiosa colaboración de estudiantes que, de forma voluntaria, compartieron apuntes, prácticas, exámenes y otros recursos. Este sitio no posee carácter oficial universitario y tiene como objetivo apoyar el aprendizaje de manera abierta, inclusiva y respetuosa con la normativa de derechos de autor.
+        </p>
+    </section>
+
+    <section class="semestre">
+        <h2>📄 Políticas de uso del repositorio</h2>
+        <p style="max-width: 800px; margin: 2em auto 0 auto; line-height: 1.7;">
+            El contenido disponible en este repositorio se ofrece con fines estrictamente educativos, sin fines de lucro, y está dirigido principalmente al estudiantado de la Escuela de Economía de la Universidad de Costa Rica. Los materiales han sido generados o cedidos voluntariamente por estudiantes de la carrera.
+        </p>
+        <p style="max-width: 800px; margin: 1em auto 0 auto; line-height: 1.7;">
+            Está prohibido reproducir, modificar o distribuir estos recursos con fines comerciales o sin la debida autorización de las personas autoras. El uso indebido de los materiales puede constituir una violación a las leyes de propiedad intelectual y derechos de autor. Se espera que todos los usuarios respeten estas políticas y utilicen el repositorio de manera ética y responsable.
+        </p>
+        <p style="max-width: 800px; margin: 1em auto 2em auto; line-height: 1.7;">
+            Si detectás alguna irregularidad o deseás solicitar la remoción de un archivo, podés contactarnos a través del correo 
+            <a href="mailto:adeconomia.ucr@gmail.com">adeconomia.ucr@gmail.com</a> y <a href="mailto:ADECO@ucr.ac.cr">ADECO@ucr.ac.cr</a>.
+        </p>
+    </section>
+
+    <section class="semestre">
+      <h2>📩 ¿Necesitás ayuda o querés reportar algo?</h2>
+      <p style="max-width: 700px; margin: 2em auto 0 auto; line-height: 1.7;">
+          Si encontrás algún problema con el sitio web o alguno de los archivos disponibles, no dudés en escribirnos a 
+          <a href="mailto:adeconomia.ucr@gmail.com">adeconomia.ucr@gmail.com</a> o 
+          <a href="mailto:ADECO@ucr.ac.cr">ADECO@ucr.ac.cr</a>. Nuestro compromiso es mantener este espacio accesible, funcional y alineado con las normativas vigentes en materia de propiedad intelectual.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- ANIMACIÓN -->
+  <script>
+    ScrollReveal().reveal('.contenido-header', {
+      distance: '0px',
+      opacity: 0,
+      duration: 1200,
+      easing: 'ease-out',
+      scale: 0.85,
+      reset: false
+    });
+
+    ScrollReveal().reveal('.semestre', {
+      origin: 'bottom',
+      distance: '40px',
+      duration: 800,
+      easing: 'ease-in-out',
+      opacity: 0,
+      scale: 0.98,
+      reset: true
+    });
+  </script>
+
+</body>
+</html>
